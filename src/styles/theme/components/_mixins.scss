@@ -1,0 +1,37 @@
+@mixin focused() {
+  outline: $focusOutline;
+  outline-offset: $focusOutlineOffset;
+  box-shadow: $focusShadow;
+}
+
+@mixin focused-input() {
+  @include focused();
+  border-color: $inputFocusBorderColor;
+}
+
+@mixin invalid-input() {
+  border-color: $inputErrorBorderColor;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin scaledPadding($val, $scale) {
+  padding: nth($val, 1) * $scale nth($val, 2) * $scale;
+}
+
+@mixin scaledFontSize($val, $scale) {
+  font-size: $val * $scale;
+}

@@ -1,0 +1,50 @@
+//reused color variables
+$shade000: #ffffff !default; //surface
+$shade100: #f8f9fa !default; //header background
+$shade200: #e9ecef !default; //hover background
+$shade300: #dee2e6 !default; //border, divider
+$shade400: #ced4da !default; //input border
+$shade500: #adb5bd !default; //input icon
+$shade600: #6c757d !default; //text secondary color
+$shade700: #495057 !default; //text color
+$shade800: #343a40 !default; //unused
+$shade900: #212529 !default; //unused
+
+//global
+$fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$fontSize: 1rem !default;
+$fontWeight: normal !default;
+$transitionDuration: 0.2s !default;
+$formElementTransition: background-color $transitionDuration, color $transitionDuration,
+  border-color $transitionDuration, box-shadow $transitionDuration !default;
+$errorColor: #e24c4c !default;
+$borderRadius: 6px !default;
+$iconFontSize: 1rem !default;
+$disabledOpacity: 0.6 !default;
+
+//focus
+$focusOutlineColor: $primaryLightColor !default;
+$focusOutline: 0 none !default;
+$focusOutlineOffset: 0 !default;
+$focusShadow: 0 0 0 0.2rem $focusOutlineColor !default;
+
+//scale
+$scaleSM: 0.875 !default;
+$scaleLG: 1.25 !default;
+
+//input field (e.g. input-text, spinner, inputmask)
+$inputPadding: 0.75rem 0.75rem !default;
+$inputTextFontSize: 1rem !default;
+
+$inputBg: $shade000 !default;
+$inputTextColor: $shade700 !default;
+$inputIconColor: $shade600 !default;
+$inputBorder: 1px solid $shade400 !default;
+$inputHoverBorderColor: $primaryColor !default;
+$inputFocusBorderColor: $primaryColor !default;
+$inputErrorBorderColor: $errorColor !default;
+$inputPlaceholderTextColor: $shade600 !default;
+$inputFilledBg: $shade200 !default;
+$inputFilledHoverBg: $inputFilledBg !default;
+$inputFilledFocusBg: $shade000 !default;

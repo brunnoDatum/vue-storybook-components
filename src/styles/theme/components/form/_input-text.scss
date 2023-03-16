@@ -1,0 +1,97 @@
+.bt-input-text {
+  font-family: $fontFamily;
+  font-size: $inputTextFontSize;
+  color: $inputTextColor;
+  background: $inputBg;
+  padding: $inputPadding;
+  border: $inputBorder;
+  transition: $formElementTransition;
+  appearance: none;
+  border-radius: $borderRadius;
+
+  &:enabled:hover {
+    border-color: $inputHoverBorderColor;
+  }
+
+  &:enabled:focus {
+    @include focused-input();
+  }
+
+  &.bt-invalid.bt-component {
+    @include invalid-input();
+  }
+
+  &.bt-input-text-sm {
+    @include scaledFontSize($inputTextFontSize, $scaleSM);
+    @include scaledPadding($inputPadding, $scaleSM);
+  }
+
+  &.bt-input-text-lg {
+    @include scaledFontSize($inputTextFontSize, $scaleLG);
+    @include scaledPadding($inputPadding, $scaleLG);
+  }
+}
+
+.bt-float-label > label {
+  left: nth($inputPadding, 2);
+  color: $inputPlaceholderTextColor;
+  transition-duration: $transitionDuration;
+}
+
+.bt-float-label > .bt-invalid + label {
+  color: $inputErrorBorderColor;
+}
+
+.bt-input-icon-left > i:first-of-type {
+  left: nth($inputPadding, 2);
+  color: $inputIconColor;
+}
+
+.bt-input-icon-left > .bt-input-text {
+  padding-left: nth($inputPadding, 2) * 2 + $iconFontSize;
+}
+
+.bt-input-icon-left.bt-float-label > label {
+  left: nth($inputPadding, 2) * 2 + $iconFontSize;
+}
+
+.bt-input-icon-right > i:last-of-type {
+  right: nth($inputPadding, 2);
+  color: $inputIconColor;
+}
+
+.bt-input-icon-right > .bt-input-text {
+  padding-right: nth($inputPadding, 2) * 2 + $iconFontSize;
+}
+
+@include placeholder {
+  color: $inputPlaceholderTextColor;
+}
+
+.bt-input-filled {
+  .bt-input-text {
+    background-color: $inputFilledBg;
+
+    &:enabled:hover {
+      background-color: $inputFilledHoverBg;
+    }
+
+    &:enabled:focus {
+      background-color: $inputFilledFocusBg;
+    }
+  }
+}
+
+.bt-input-text-sm {
+  .bt-input-text {
+    @include scaledFontSize($inputTextFontSize, $scaleSM);
+    @include scaledPadding($inputPadding, $scaleSM);
+  }
+}
+
+.bt-input-text-lg {
+  .bt-input-text {
+    @include scaledFontSize($inputTextFontSize, $scaleLG);
+    @include scaledPadding($inputPadding, $scaleLG);
+  }
+}
